@@ -1,0 +1,58 @@
+﻿<%@ Master Language="VB" CodeFile="cabecera.master.vb" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <asp:ContentPlaceHolder id="indexHead" runat="server"></asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder id="antenaHead" runat="server"></asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder id="canalesHead" runat="server"></asp:ContentPlaceHolder>
+</head>
+
+<body>
+    <form id="form1" runat="server">
+        <header>
+            <h1>PROGRAMACIÓN TV</h1>
+            <figure>
+               <img src="../../imagenes/logo.png" alt="Logo Atresmedia" title="Logo Atresmedia"/>
+            </figure>
+        </header>
+        <nav>
+            <ul>
+                <asp:ImageButton ID="imgBtnAntena" runat="server" ImageUrl="~/imagenes/antena3.gif" ToolTip="Ir a la programación de Antena 3" CssClass="btnNavSuperior"/>
+                <asp:ImageButton ID="imgBtnSexta" runat="server" ImageUrl="~/imagenes/lasexta.png" ToolTip="Ir a la programación de La Sexta" CssClass="btnNavSuperior"/>
+                <asp:ImageButton ID="imgBtnNeox" runat="server" ImageUrl="~/imagenes/neox.png" ToolTip="Ir a la programación de Neox" CssClass="btnNavSuperior"/>
+                <asp:ImageButton ID="imgBtnMega" runat="server" ImageUrl="~/imagenes/mega.png" ToolTip="Ir a la programación de Mega" CssClass="btnNavSuperior"/>
+                <asp:ImageButton ID="imgBtnNova" runat="server" ImageUrl="~/imagenes/nova.png" ToolTip="Ir a la programación de Nova" CssClass="btnNavSuperior"/>
+            </ul>
+        </nav>
+        <div id="contenedorPrincipal">
+            <aside>
+                <h3>Páginas principales</h3>
+                <ul>
+                    <asp:ImageButton ID="imgBtnAsideAntena" runat="server" ImageUrl="~/imagenes/antena3.gif" ToolTip="Ir a la página de Antena 3" CssClass="btnNavSuperior" PostBackUrl="http://www.antena3.com/"/><br />
+                    <asp:ImageButton ID="imgBtnAsideSexta" runat="server" ImageUrl="~/imagenes/lasexta.png" ToolTip="Ir a la página de La Sexta" CssClass="btnNavSuperior" PostBackUrl="http://www.lasexta.com/"/><br />
+                    <asp:ImageButton ID="imgBtnAsideNeox" runat="server" ImageUrl="~/imagenes/neox.png" ToolTip="Ir a la página de Neox" CssClass="btnNavSuperior" PostBackUrl="http://neox.atresmedia.com/"/><br />
+                    <asp:ImageButton ID="imgBtnAsideMega" runat="server" ImageUrl="~/imagenes/mega.png" ToolTip="Ir a la página de Mega" CssClass="btnNavSuperior" PostBackUrl="http://mega.atresmedia.com/"/><br />
+                    <asp:ImageButton ID="imgBtnAsideNova" runat="server" ImageUrl="~/imagenes/nova.png" ToolTip="Ir a la página de Nova" CssClass="btnNavSuperior" PostBackUrl="http://nova.atresmedia.com/"/><br />
+                </ul>
+            </aside>
+            <section>
+                <asp:ContentPlaceHolder id="index" runat="server"></asp:ContentPlaceHolder>
+                <asp:ContentPlaceHolder id="antena" runat="server"></asp:ContentPlaceHolder>
+                <asp:ContentPlaceHolder id="sexta" runat="server"></asp:ContentPlaceHolder>
+                <asp:ContentPlaceHolder id="neox" runat="server"></asp:ContentPlaceHolder>
+                <asp:ContentPlaceHolder id="mega" runat="server"></asp:ContentPlaceHolder>
+                <asp:ContentPlaceHolder id="nova" runat="server"></asp:ContentPlaceHolder>
+            </section>
+        </div>
+        <footer>
+            <asp:ImageButton ID="imgBtnFooter" runat="server" ImageUrl="../../imagenes/logo.png" ToolTip="Ir a la página de Atresmedia" CssClass="btnNavSuperior" PostBackUrl="http://www.atresmedia.com/"/>
+            <asp:Label ID="lblAutor" runat="server">Diego Hurtado Rosales</asp:Label>
+        </footer>
+    </form>
+    
+</body>
+</html>
